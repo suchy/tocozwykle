@@ -1,0 +1,95 @@
+{
+  "tasks": {
+    "dev": {
+      "command": "deno task fingerprint & deno task tailwind & deno run -A --watch --env-file=.env ./app/main.ts",
+      "description": "Run local development envinronment"
+    },
+    "server": {
+      "command": "deno task fingerprint & deno run --cached-only -A ./app/main.ts",
+      "description": "Run app"
+    },
+    "tailwind": {
+      "command": "deno run -A npm:@tailwindcss/cli -i ./app/styles.css -o ./app/static/styles.css --watch",
+      "description": "Build css with Tailwind"
+    },
+    "db:migrations:create": {
+      "command": "deno run --allow-env --allow-read --allow-write --allow-sys --allow-run npm:drizzle-kit generate --config=database/drizzle.config.ts --name",
+      "description": "Create database migration based on schema changes"
+    },
+    "db:migrations:run": {
+      "command": "deno run --allow-net --allow-env --allow-read --allow-sys --allow-run npm:drizzle-kit migrate --config=database/drizzle.config.ts && deno task db:pull",
+      "description": "Run database migrations"
+    },
+    "db:schema:create:auth": {
+      "command": "deno run --allow-env --allow-read --allow-write --allow-sys --allow-run --allow-ffi npm:@better-auth/cli generate --config=app/core/auth/auth.ts --output=database/schema/authSchema.ts -y",
+      "description": "Create database migration for auth (better-auth)"
+    },
+    "db:pull": {
+      "command": "deno run --allow-env --allow-ffi --env-file=.env ./scripts/syncRemoteToLocalReplica.ts",
+      "description": "Pull data from remote database to local"
+    },
+    "deploy": {
+      "command": "flyctl deploy --remote-only --verbose --config ./deploy/fly.toml",
+      "description": "Deploy application to production envinronment"
+    },
+    "logs": {
+      "command": "flyctl logs --config ./deploy/fly.toml",
+      "description": "Show production logs"
+    },
+    "ssh": {
+      "command": "flyctl ssh console --config ./deploy/fly.toml",
+      "description": "SSH to production server"
+    },
+    "setup": {
+      "command": "deno install && deno task db:migrations:run",
+      "description": "Setup local development envinronment"
+    },
+    "fingerprint": {
+      "command": "deno run --allow-read --allow-write ./scripts/fingerprintStaticAssets.ts",
+      "description": "Create a manifest file with hashed static files paths to cache"
+    }
+  },
+  "nodeModulesDir": "auto",
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true
+  },
+  "lint": {
+    "exclude": ["vendor/", "app/static/vendor/", "app/static/styles.css"],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["no-explicit-any"]
+    }
+  },
+  "vendor": true,
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "@hono/hono/jsx",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "imports": {
+    "@bronti/argon2": "jsr:@bronti/argon2@^1.0.3",
+    "@hono/hono": "jsr:@hono/hono@^4.8.4",
+    "@libsql/client": "npm:@libsql/client@^0.15.9",
+    "@std/crypto": "jsr:@std/crypto@^1.0.5",
+    "@std/encoding": "jsr:@std/encoding@^1.0.10",
+    "@std/fs": "jsr:@std/fs@^1.0.19",
+    "@std/media-types": "jsr:@std/media-types@^1.1.0",
+    "@std/path": "jsr:@std/path@^1.1.1",
+    "@tailwindcss/cli": "npm:@tailwindcss/cli@^4.1.11",
+    "drizzle-kit": "npm:drizzle-kit@^0.31.4",
+    "drizzle-orm": "npm:drizzle-orm@^0.44.2",
+    "nanoid": "npm:nanoid@^5.1.5",
+    "resend": "npm:resend@^4.6.0",
+    "tailwindcss": "npm:tailwindcss@^4.1.11",
+    "zod": "npm:zod@^4.0.0"
+  }
+}

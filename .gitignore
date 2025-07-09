@@ -1,0 +1,4 @@
+node_modules
+.env
+data
+app/static/styles.css
