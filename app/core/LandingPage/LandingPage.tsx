@@ -12,62 +12,95 @@ export function LandingPage(props?: LayoutProps) {
 
   return (
     <Layout {...props} head={h}>
-      <div class='bg-[#24B67B] px-6 py-3'>
-        <div class='max-w-7xl mx-auto flex items-center justify-between'>
-          <a
-            href='/'
-            title='To co zwykle - cykliczne dostawy produktów domowych bez wysiłku'
-            class='text-white font-medium bg-emerald-800 hover:bg-emerald-600 rounded-sm px-4 py-2 flex items-center gap-2'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-shopping-cart-icon lucide-shopping-cart'
+      <main class='bg-white'>
+        <div class='bg-[#24B67B] px-6 py-3'>
+          <div class='max-w-7xl mx-auto flex items-center justify-between'>
+            <a
+              href='/'
+              title='To co zwykle - cykliczne dostawy produktów domowych bez wysiłku'
+              class='text-white font-medium bg-emerald-800 hover:bg-emerald-600 rounded-sm px-4 py-2 flex items-center gap-2'
             >
-              <circle cx='8' cy='21' r='1' />
-              <circle cx='19' cy='21' r='1' />
-              <path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12' />
-            </svg>
-            To co zwykle
-          </a>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                class='lucide lucide-shopping-cart-icon lucide-shopping-cart'
+              >
+                <circle cx='8' cy='21' r='1' />
+                <circle cx='19' cy='21' r='1' />
+                <path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12' />
+              </svg>
+              To co zwykle
+            </a>
 
-          <ul class='flex items-center gap-4'>
-            {nav.map((n) => (
-              <li>
-                <a
-                  href={`#${n.id}`}
-                  title={n.text}
-                  class='text-white hover:text-emerald-800'
-                >
-                  {n.text}
-                </a>
-              </li>
-            ))}
-          </ul>
+            <ul class='items-center gap-4 hidden md:flex'>
+              {nav.map((n) => (
+                <li>
+                  <a
+                    href={`#${n.id}`}
+                    title={n.text}
+                    class='text-white hover:text-emerald-800'
+                  >
+                    {n.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class='bg-[#2B2B2B] px-6 py-12'>
-        <div class='max-w-7xl mx-auto'>
-          <h1 class='text-white font-semibold text-3xl mb-8 max-w-1/2 uppercase leading-relaxed'>
-            Twoje domowe zakupy<br />dostarczane cyklicznie<br />zgodnie z twoim
-            rytmem
-          </h1>
+        <div class='bg-[#2B2B2B] px-6 py-12'>
+          <div class='max-w-7xl mx-auto'>
+            <h1 class='text-white font-semibold text-3xl mb-8 md:max-w-1/2 uppercase leading-relaxed'>
+              Twoje domowe zakupy<br />dostarczane cyklicznie<br />zgodnie z
+              twoim rytmem
+            </h1>
 
-          <div class='max-w-1/2'>
-            <p class='mb-8 text-[#ccc] leading-relaxed text-sm'>
-              Wybierz domowe produkty, których potrzebuejsz, ustaw harmonogram
-              dostaw i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy
-              Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz.
-            </p>
+            <div class='md:max-w-1/2'>
+              <p class='mb-8 text-[#ccc] leading-relaxed text-sm'>
+                Wybierz domowe produkty, których potrzebuejsz, ustaw harmonogram
+                dostaw i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy
+                Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz.
+              </p>
 
+              <button
+                type='button'
+                class='hover:bg-emerald-800 text-white px-8 py-4 rounded-sm uppercase bg-[#24B67B] cursor-pointer tracking-wider text-lg'
+              >
+                Jestem zainteresowany
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <section class='max-w-7xl mx-auto px-6 py-12' id='dlaczego-warto'>
+          <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
+            Dlaczego warto?
+          </h2>
+
+          <p class='mb-12 text-center text-base leading-relaxed text-gray-500'>
+            Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz -
+            bez stresu, bez wysiłku, bez niespodzianek.
+          </p>
+
+          <div class='grid md:grid-cols-2 gap-6 mb-12'>
+            {benefits.map((b) => (
+              <div>
+                <h3 class='mb-4 font-medium'>{b.title}</h3>
+                <p class='text-sm leading-relaxed text-gray-500'>
+                  {b.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div class='text-center'>
             <button
               type='button'
               class='hover:bg-emerald-800 text-white px-8 py-4 rounded-sm uppercase bg-[#24B67B] cursor-pointer tracking-wider text-lg'
@@ -75,78 +108,117 @@ export function LandingPage(props?: LayoutProps) {
               Jestem zainteresowany
             </button>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <section class='max-w-7xl mx-auto px-6 py-12' id='dlaczego-warto'>
-        <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-          Dlaczego warto?
-        </h2>
+        <section class='px-6 py-12 bg-gray-50' id='jak-to-dziala'>
+          <div class='max-w-7xl mx-auto'>
+            <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
+              Jak to działa
+            </h2>
 
-        <p class='mb-12 text-center text-base leading-relaxed text-gray-500'>
-          Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz -
-          bez stresu, bez wysiłku, bez niespodzianek.
-        </p>
+            <ol class='mx-auto max-w-4xl'>
+              {howItWorks.map((h) => (
+                <li class='flex items-center gap-6 mb-6 last:mb-0 border-b border-b-gray-200 last:border-b-0 pb-6 last:pb-0'>
+                  <span class='rounded-sm bg-[#24B67B] p-2 text-white'>
+                    {h.icon}
+                  </span>
+                  <span class='text-sm'>{h.text}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
 
-        <div class='grid grid-cols-2 gap-6 mb-12'>
-          {benefits.map((b) => (
-            <div>
-              <h3 class='mb-4 font-medium'>{b.title}</h3>
-              <p class='text-sm leading-relaxed text-gray-500'>
-                {b.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <section class='px-6 py-12' id='produkty'>
+          <div class='max-w-7xl mx-auto'>
+            <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
+              Produkty
+            </h2>
+          </div>
+        </section>
 
-        <div class='text-center'>
-          <button
-            type='button'
-            class='hover:bg-emerald-800 text-white px-8 py-4 rounded-sm uppercase bg-[#24B67B] cursor-pointer tracking-wider text-lg'
-          >
-            Jestem zainteresowany
-          </button>
-        </div>
-      </section>
+        <section
+          class='px-6 py-12 bg-gray-50'
+          id='najczesciej-zadawane-pytania'
+        >
+          <div class='max-w-4xl mx-auto'>
+            <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
+              Najczęściej zadawane pytania
+            </h2>
 
-      <section class='px-6 py-12 bg-gray-50' id='jak-to-dziala'>
-        <div class='max-w-7xl mx-auto'>
-          <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-            Jak to działa
-          </h2>
+            {questions.map((q) => (
+              <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6'>
+                <summary class='flex items-center justify-between gap-4 cursor-pointer hover:text-[#24B67B]'>
+                  <h3>{q.question}</h3>
 
-          <ol class='mx-auto max-w-4xl'>
-            {howItWorks.map((h) => (
-              <li class='flex items-center gap-6 mb-6 last:mb-0 border-b border-b-gray-200 last:border-b-0 pb-6 last:pb-0'>
-                <span class='rounded-sm bg-[#24B67B] p-2 text-white'>
-                  {h.icon}
-                </span>
-                <span class='text-sm'>{h.text}</span>
-              </li>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    class='group-open:rotate-180 shrink-0'
+                  >
+                    <path d='m6 9 6 6 6-6' />
+                  </svg>
+                </summary>
+
+                <p class='text-sm leading-relaxed text-gray-500 mt-4'>
+                  {q.answer}
+                </p>
+              </details>
             ))}
-          </ol>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section class='px-6 py-12' id='produkty'>
-        <div class='max-w-7xl mx-auto'>
-          <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-            Produkty
-          </h2>
-        </div>
-      </section>
+        <footer class='bg-[#2B2B2B] px-6 py-4'>
+          <div class='max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0'>
+            <a
+              href='/'
+              title='To co zwykle - cykliczne dostawy produktów domowych bez wysiłku'
+              class='text-white font-medium bg-emerald-800 hover:bg-emerald-600 rounded-sm px-4 py-2 flex items-center gap-2'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                class='lucide lucide-shopping-cart-icon lucide-shopping-cart'
+              >
+                <circle cx='8' cy='21' r='1' />
+                <circle cx='19' cy='21' r='1' />
+                <path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12' />
+              </svg>
+              To co zwykle
+            </a>
 
-      <section class='px-6 py-12 bg-gray-50' id='najczesciej-zadawane-pytania'>
-        <div class='max-w-4xl mx-auto'>
-          <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-            Najczęściej zadawane pytania
-          </h2>
+            <ul class='flex items-center gap-4'>
+              <li>
+                <a
+                  href='mailto:kontakt@tocozwykle.pl'
+                  title='Wyślij wiadomość na kontakt@tocozwykle.pl'
+                  class='text-white hover:text-gray-400'
+                >
+                  kontakt@tocozwykle.pl
+                </a>
+              </li>
 
-          {questions.map((q) => (
-            <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6'>
-              <summary class='flex items-center justify-between cursor-pointer hover:text-[#24B67B]'>
-                <h3>{q.question}</h3>
-
+              {
+                /* <li>
+              <a
+                href='/'
+                title='To co zwykle na Facebook'
+                class='text-white hover:text-gray-400'
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
@@ -157,19 +229,42 @@ export function LandingPage(props?: LayoutProps) {
                   stroke-width='2'
                   stroke-linecap='round'
                   stroke-linejoin='round'
-                  class='group-open:rotate-180'
+                  class='lucide lucide-facebook-icon lucide-facebook'
                 >
-                  <path d='m6 9 6 6 6-6' />
+                  <path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' />
                 </svg>
-              </summary>
+              </a>
+            </li>
 
-              <p class='text-sm leading-relaxed text-gray-500 mt-4'>
-                {q.answer}
-              </p>
-            </details>
-          ))}
-        </div>
-      </section>
+            <li>
+              <a
+                href='/'
+                title='To co zwykle na Instagram'
+                class='text-white hover:text-gray-400'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='lucide lucide-instagram-icon lucide-instagram'
+                >
+                  <rect width='20' height='20' x='2' y='2' rx='5' ry='5' />
+                  <path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' />
+                  <line x1='17.5' x2='17.51' y1='6.5' y2='6.5' />
+                </svg>
+              </a>
+            </li>*/
+              }
+            </ul>
+          </div>
+        </footer>
+      </main>
     </Layout>
   );
 }

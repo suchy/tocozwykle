@@ -39,7 +39,7 @@ export function Page(
       <body
         hx-ext='preload'
         class={cn([
-          'font-inter text-slate-700 min-h-screen scroll-smooth',
+          'font-inter text-slate-700 min-h-screen scroll-smooth bg-[#2B2B2B]',
           className,
         ])}
       >
