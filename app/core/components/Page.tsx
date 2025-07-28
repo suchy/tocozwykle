@@ -28,7 +28,11 @@ export function Page(
         <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link href='https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800&amp;display=swap' />
         <link rel='stylesheet' href={assetPath('/static/styles.css')} />
-        {/* <link rel='icon' href='/static/images/favicon.png' type='image/png' /> */}
+        <link
+          rel='icon'
+          href={assetPath('/static/images/favicon.png')}
+          type='image/png'
+        />
 
         {!!head && head()}
 
