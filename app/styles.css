@@ -8,9 +8,9 @@
   --content-without-nav-height: calc(100vh - var(--header-height));
 }
 
-a:not(.btn, .btn-outline, .btn-primary, .btn-sm-outline, .btn-sm-icon-outline):hover {
+/* a:not(.btn, .btn-outline, .btn-primary, .btn-sm-outline, .btn-sm-icon-outline):hover {
   @apply text-indigo-500;
-}
+} */
 
 .loading {
   display: none;
