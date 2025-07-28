@@ -26,14 +26,28 @@ export function Page(
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800&amp;display=swap'
-          rel='stylesheet'
-        />
+        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800&amp;display=swap' />
         <link rel='stylesheet' href={assetPath('/static/styles.css')} />
         {/* <link rel='icon' href='/static/images/favicon.png' type='image/png' /> */}
 
         {!!head && head()}
+
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-5FZNS7JQ0M'
+        >
+        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5FZNS7JQ0M');
+  `,
+          }}
+        />
       </head>
 
       <body

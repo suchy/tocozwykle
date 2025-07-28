@@ -1,0 +1,30 @@
+name: Production Deployment
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    environment: production
+    name: Production deployment to fly.io
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Install dependencies
+        run: deno install
+
+      - name: Setup flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@1.5
+
+      - name: Deploy app
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: deno task deploy
