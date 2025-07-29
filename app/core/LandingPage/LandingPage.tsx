@@ -161,7 +161,7 @@ export function LandingPage(props?: LayoutProps) {
         <Section
           title='Powiadom mnie o starcie'
           id='powiadom-mnie-o-starcie'
-          className='bg-[#26b47c] text-white'
+          class='bg-[#26b47c] text-white'
         >
           <form method='post'>
             <label for='email' class='block text-center mb-8'>

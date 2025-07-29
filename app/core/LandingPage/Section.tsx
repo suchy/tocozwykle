@@ -10,8 +10,10 @@ type Props = PropsWithChildren<
 >;
 
 export function Section(
-  { title, description, id, children, className }: Props,
+  { title, description, id, children, ...props }: Props,
 ) {
+  const className = props.class || props.className;
+
   return (
     <section class={cn(['px-6 py-12', className])} id={id}>
       <div class='max-w-7xl mx-auto'>
