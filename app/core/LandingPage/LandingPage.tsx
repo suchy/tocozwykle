@@ -159,7 +159,7 @@ export function LandingPage(props?: LayoutProps) {
         </Section>
 
         <Section
-          title='Najczęściej zadawane pytania'
+          title='Powiadom mnie o starcie'
           id='powiadom-mnie-o-starcie'
           className='bg-[#26b47c] text-white'
         >
@@ -169,7 +169,7 @@ export function LandingPage(props?: LayoutProps) {
               powiadomienie jako pierwszy.
             </label>
 
-            <div class='flex items-center gap-2 mx-auto md:max-w-md'>
+            <div class='flex items-center gap-2 mx-auto md:max-w-lg'>
               <input
                 type='email'
                 name='email'
@@ -182,7 +182,7 @@ export function LandingPage(props?: LayoutProps) {
                 type='submit'
                 class='bg-emerald-800 hover:bg-emerald-600 text-white rounded-sm px-4 py-2 cursor-pointer'
               >
-                Powiadom mnie
+                Powiadom mnie o starcie
               </button>
             </div>
           </form>
