@@ -1,15 +1,19 @@
 {
   "tasks": {
     "dev": {
-      "command": "deno task fingerprint & deno task tailwind & deno run -A --watch --env-file=.env ./app/main.ts",
+      "command": "deno task fingerprint & deno task tailwind:dev & deno run -A --watch --env-file=.env ./app/main.ts",
       "description": "Run local development envinronment"
     },
     "server": {
-      "command": "deno task fingerprint & deno task tailwind & deno run --cached-only -A ./app/main.ts",
+      "command": "deno task tailwind && deno task fingerprint && deno run --cached-only -A ./app/main.ts",
       "description": "Run app"
     },
-    "tailwind": {
+    "tailwind:dev": {
       "command": "deno run -A npm:@tailwindcss/cli -i ./app/styles.css -o ./app/static/styles.css --watch",
+      "description": "Build css with Tailwind in watch mode"
+    },
+    "tailwind": {
+      "command": "deno run -A npm:@tailwindcss/cli -i ./app/styles.css -o ./app/static/styles.css",
       "description": "Build css with Tailwind"
     },
     "db:migrations:create": {
@@ -90,6 +94,6 @@
     "nanoid": "npm:nanoid@^5.1.5",
     "resend": "npm:resend@^4.6.0",
     "tailwindcss": "npm:tailwindcss@^4.1.11",
-    "zod": "npm:zod@^4.0.0"
+    "zod": "npm:zod@^4.0.13"
   }
 }

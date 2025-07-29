@@ -17,7 +17,7 @@
     "npm:nanoid@^5.1.5": "5.1.5",
     "npm:resend@^4.6.0": "4.6.0",
     "npm:tailwindcss@^4.1.11": "4.1.11",
-    "npm:zod@4": "4.0.0"
+    "npm:zod@^4.0.13": "4.0.13"
   },
   "jsr": {
     "@bronti/argon2@1.0.3": {
@@ -1381,8 +1381,8 @@
     "yallist@5.0.0": {
       "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw=="
     },
-    "zod@4.0.0": {
-      "integrity": "sha512-9diLdTPc/L7w/5jI4C3gHYNiGHDV9IZYxo1e5LSD8cabi65WVTWWb+g2BGPEpUUCOxR4D+6O5B0AzyMdUAXwrw=="
+    "zod@4.0.13": {
+      "integrity": "sha512-jv+zRxuZQxTrFHzxZ46ezL2FtnE+M4HIJHJEwLsZ7UjrXHltdG6HrxvqM0twoVCWxJiYf8WqKjAcjztegpkB+Q=="
     }
   },
   "workspace": {
@@ -1401,7 +1401,7 @@
       "npm:nanoid@^5.1.5",
       "npm:resend@^4.6.0",
       "npm:tailwindcss@^4.1.11",
-      "npm:zod@4"
+      "npm:zod@^4.0.13"
     ]
   }
 }

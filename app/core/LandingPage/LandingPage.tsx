@@ -3,8 +3,13 @@ import { GridSection } from './GridSection.tsx';
 import { JoinButton } from './JoinButton.tsx';
 import { Section } from './Section.tsx';
 
-export function LandingPage(props?: LayoutProps) {
-  const { head } = props ?? {};
+type Props = LayoutProps<{
+  emailError?: string;
+  email?: string;
+}>;
+
+export function LandingPage(props?: Props) {
+  const { head, emailError, email } = props ?? {};
 
   const h = {
     ...head,
@@ -163,27 +168,35 @@ export function LandingPage(props?: LayoutProps) {
           id='powiadom-mnie-o-starcie'
           class='bg-[#26b47c] text-white'
         >
-          <form method='post'>
+          <form method='post' action='/'>
             <label for='email' class='block text-center mb-8'>
               Już niedługo startujemy! Podaj swój email, by otrzymać
               powiadomienie jako pierwszy.
             </label>
 
-            <div class='flex items-center gap-2 mx-auto md:max-w-xl'>
-              <input
-                type='email'
-                name='email'
-                id='email'
-                class='bg-white rounded-sm border border-emerald-800 text-base text-slate-700 px-4 py-2 grow focus:outline-0 focus:ring-2 focus:ring-emerald-600'
-                placeholder='Podaj swój adres email'
-              />
+            <div class='mx-auto md:max-w-xl'>
+              <div class='flex items-center gap-2'>
+                <input
+                  type='email'
+                  name='email'
+                  id='email'
+                  class='bg-white rounded-sm border border-emerald-800 text-base text-slate-700 px-4 py-2 grow focus:outline-0 focus:ring-2 focus:ring-emerald-600'
+                  placeholder='Podaj swój adres email'
+                  value={email ?? ''}
+                  required
+                />
 
-              <button
-                type='submit'
-                class='bg-emerald-800 hover:bg-emerald-600 text-white rounded-sm px-4 py-2 cursor-pointer'
-              >
-                Powiadom mnie o starcie
-              </button>
+                <button
+                  type='submit'
+                  class='bg-emerald-800 hover:bg-emerald-600 text-white rounded-sm px-4 py-2 cursor-pointer'
+                >
+                  Powiadom mnie o starcie
+                </button>
+              </div>
+
+              {emailError && (
+                <p class='text-red-600 text-sm mt-2'>{emailError}</p>
+              )}
             </div>
           </form>
         </Section>
