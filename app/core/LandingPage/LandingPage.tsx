@@ -1,4 +1,7 @@
 import { Layout, LayoutProps } from '../components/Layout.tsx';
+import { GridSection } from './GridSection.tsx';
+import { JoinButton } from './JoinButton.tsx';
+import { Section } from './Section.tsx';
 
 export function LandingPage(props?: LayoutProps) {
   const { head } = props ?? {};
@@ -75,22 +78,17 @@ export function LandingPage(props?: LayoutProps) {
           </div>
         </div>
 
-        <section class='max-w-7xl mx-auto px-6 py-12' id='dlaczego-warto'>
-          <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-            Dlaczego warto?
-          </h2>
-
-          <p class='mb-12 text-center text-base leading-loose text-gray-500'>
-            Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz -
-            bez stresu, bez wysiłku, bez niespodzianek.
-          </p>
-
+        <Section
+          title='Dlaczego warto?'
+          description='Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz - bez stresu, bez wysiłku, bez niespodzianek.'
+          id='dlaczego-warto'
+        >
           <GridSection items={benefits} />
 
           <div class='text-center mt-12'>
             <JoinButton />
           </div>
-        </section>
+        </Section>
 
         <section class='px-6 py-12 bg-gray-50' id='jak-to-dziala'>
           <div class='max-w-7xl mx-auto'>
@@ -115,71 +113,80 @@ export function LandingPage(props?: LayoutProps) {
           </div>
         </section>
 
-        <section class='px-6 py-12' id='produkty'>
-          <div class='max-w-7xl mx-auto'>
-            <h2 class='text-center mb-8 text-2xl font-semibold uppercase'>
-              Produkty
-            </h2>
-
-            <p class='mb-12 text-center text-base leading-loose text-gray-500'>
-              Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz
-              - bez stresu, bez wysiłku, bez niespodzianek.
-            </p>
-
-            <GridSection items={products} />
-
-            <div class='text-center mt-12'>
-              <JoinButton />
-            </div>
-          </div>
-        </section>
-
-        <section
-          class='px-6 py-12 bg-gray-50'
-          id='najczesciej-zadawane-pytania'
+        <Section
+          title='Produkty'
+          description='Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz - bez stresu, bez wysiłku, bez niespodzianek.'
+          id='produkty'
         >
-          <div class='max-w-4xl mx-auto'>
-            <h2 class='text-center mb-12 text-2xl font-semibold uppercase'>
-              Najczęściej zadawane pytania
-            </h2>
-
-            {questions.map((q) => (
-              <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6'>
-                <summary class='flex items-center justify-between gap-4 cursor-pointer hover:text-[#24B67B]'>
-                  <h3>{q.question}</h3>
-
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    stroke='currentColor'
-                    stroke-width='2'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    class='group-open:rotate-180 shrink-0'
-                  >
-                    <path d='m6 9 6 6 6-6' />
-                  </svg>
-                </summary>
-
-                <p class='text-sm leading-loose text-gray-500 mt-4'>
-                  {q.answer}
-                </p>
-              </details>
-            ))}
-          </div>
+          <GridSection items={products} />
 
           <div class='text-center mt-12'>
             <JoinButton />
           </div>
-        </section>
+        </Section>
 
-        <section class='bg-[#2B2B2B] px-6 py-4'>
-          <form>
+        <Section
+          title='Najczęściej zadawane pytania'
+          id='najczesciej-zadawane-pytania'
+          className='bg-gray-50'
+        >
+          {questions.map((q) => (
+            <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6 max-w-4xl mx-auto'>
+              <summary class='flex items-center justify-between gap-4 cursor-pointer hover:text-[#24B67B]'>
+                <h3>{q.question}</h3>
+
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='group-open:rotate-180 shrink-0'
+                >
+                  <path d='m6 9 6 6 6-6' />
+                </svg>
+              </summary>
+
+              <p class='text-sm leading-loose text-gray-500 mt-4'>
+                {q.answer}
+              </p>
+            </details>
+          ))}
+        </Section>
+
+        <Section
+          title='Najczęściej zadawane pytania'
+          id='powiadom-mnie-o-starcie'
+          className='bg-[#26b47c] text-white'
+        >
+          <form method='post'>
+            <label for='email' class='block text-center mb-8'>
+              Już niedługo startujemy! Podaj swój email, by otrzymać
+              powiadomienie jako pierwszy.
+            </label>
+
+            <div class='flex items-center gap-2 mx-auto md:max-w-md'>
+              <input
+                type='email'
+                name='email'
+                id='email'
+                class='bg-white rounded-sm border border-emerald-800 text-base text-slate-700 px-4 py-2 grow focus:outline-0 focus:ring-2 focus:ring-emerald-600'
+                placeholder='Podaj swój adres email'
+              />
+
+              <button
+                type='submit'
+                class='bg-emerald-800 hover:bg-emerald-600 text-white rounded-sm px-4 py-2 cursor-pointer'
+              >
+                Powiadom mnie
+              </button>
+            </div>
           </form>
-        </section>
+        </Section>
 
         <footer class='bg-[#2B2B2B] px-6 py-4'>
           <div class='max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0'>
@@ -272,40 +279,6 @@ export function LandingPage(props?: LayoutProps) {
         </footer>
       </main>
     </Layout>
-  );
-}
-
-type GridSectionProps = {
-  items: { title: string; description: string; icon: any }[];
-};
-
-function GridSection({ items }: GridSectionProps) {
-  return (
-    <div class='grid md:grid-cols-2 gap-6'>
-      {items.map((i) => (
-        <div>
-          <header class='flex items-center gap-4 mb-2'>
-            {i.icon}
-            <h3 class='font-semibold'>{i.title}</h3>
-          </header>
-
-          <p class='text-sm leading-loose text-gray-500 pl-10'>
-            {i.description}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function JoinButton() {
-  return (
-    <button
-      type='button'
-      class='hover:bg-emerald-800 text-white px-8 py-4 rounded-sm uppercase bg-[#24B67B] cursor-pointer tracking-wider text-lg'
-    >
-      Powiadom mnie o starcie
-    </button>
   );
 }
 
