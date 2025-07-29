@@ -67,7 +67,7 @@ export function LandingPage(props?: LayoutProps) {
                 Wybierz domowe produkty, których potrzebuejsz, ustaw harmonogram
                 dostaw i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy
                 Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz. Ruszamy
-                już w krótce.
+                już wkrótce!
               </p>
 
               <JoinButton />
