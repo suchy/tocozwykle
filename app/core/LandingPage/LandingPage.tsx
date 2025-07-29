@@ -65,7 +65,7 @@ export function LandingPage(props?: Props) {
 
         <div class='bg-[#2B2B2B] px-6 py-12'>
           <div class='max-w-7xl mx-auto'>
-            <h1 class='text-white font-semibold text-3xl mb-8 md:max-w-1/2 uppercase leading-relaxed'>
+            <h1 class='text-white font-semibold mb-8 md:max-w-1/2 uppercase leading-relaxed text-2xl sm:text-3xl'>
               Twoje domowe zakupy<br />dostarczane cyklicznie<br />zgodnie z
               twoim rytmem
             </h1>
@@ -175,12 +175,12 @@ export function LandingPage(props?: Props) {
             </label>
 
             <div class='mx-auto md:max-w-xl'>
-              <div class='flex items-center gap-2'>
+              <div class='flex items-center flex-col sm:flex-row gap-2'>
                 <input
                   type='email'
                   name='email'
                   id='email'
-                  class='bg-white rounded-sm border border-emerald-800 text-base text-slate-700 px-4 py-2 grow focus:outline-0 focus:ring-2 focus:ring-emerald-600'
+                  class='bg-white rounded-sm border border-emerald-800 text-base text-slate-700 px-4 py-2 sm:grow focus:outline-0 focus:ring-2 focus:ring-emerald-600 w-full sm:w-auto'
                   placeholder='Podaj swój adres email'
                   value={email ?? ''}
                   required
