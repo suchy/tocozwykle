@@ -5,7 +5,7 @@
       "description": "Run local development envinronment"
     },
     "server": {
-      "command": "deno task fingerprint & deno run --cached-only -A ./app/main.ts",
+      "command": "deno task fingerprint & deno task tailwind & deno run --cached-only -A ./app/main.ts",
       "description": "Run app"
     },
     "tailwind": {
