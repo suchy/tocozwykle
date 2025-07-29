@@ -169,7 +169,7 @@ export function LandingPage(props?: LayoutProps) {
               powiadomienie jako pierwszy.
             </label>
 
-            <div class='flex items-center gap-2 mx-auto md:max-w-lg'>
+            <div class='flex items-center gap-2 mx-auto md:max-w-xl'>
               <input
                 type='email'
                 name='email'
