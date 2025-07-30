@@ -104,7 +104,7 @@ export function LandingPage(props?: Props) {
             <ol class='mx-auto max-w-4xl'>
               {howItWorks.map((h) => (
                 <li class='flex items-center gap-6 mb-6 last:mb-0 border-b border-b-gray-200 last:border-b-0 pb-6 last:pb-0'>
-                  <span class='rounded-sm bg-[#24B67B] p-2 text-white'>
+                  <span class='rounded-sm bg-[#24B67B] p-2 text-white shrink-0'>
                     {h.icon}
                   </span>
                   <span class='text-sm'>{h.text}</span>
@@ -318,7 +318,7 @@ const benefits = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-brain-icon lucide-brain'
+        class='lucide lucide-brain-icon lucide-brain shrink-0'
       >
         <path d='M12 18V5' />
         <path d='M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4' />
@@ -346,7 +346,7 @@ const benefits = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-baby-icon lucide-baby'
+        class='lucide lucide-baby-icon lucide-baby shrink-0'
       >
         <path d='M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5' />
         <path d='M15 12h.01' />
@@ -370,7 +370,7 @@ const benefits = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-paw-print-icon lucide-paw-print'
+        class='lucide lucide-paw-print-icon lucide-paw-print shrink-0'
       >
         <circle cx='11' cy='4' r='2' />
         <circle cx='18' cy='8' r='2' />
@@ -394,7 +394,7 @@ const benefits = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-waves-icon lucide-waves'
+        class='lucide lucide-waves-icon lucide-waves shrink-0'
       >
         <path d='M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1' />
         <path d='M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1' />
@@ -417,7 +417,7 @@ const benefits = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-history-icon lucide-history'
+        class='lucide lucide-history-icon lucide-history shrink-0'
       >
         <path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8' />
         <path d='M3 3v5h5' />
@@ -691,7 +691,7 @@ const products = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-soap-dispenser-droplet-icon lucide-soap-dispenser-droplet'
+        class='lucide lucide-soap-dispenser-droplet-icon lucide-soap-dispenser-droplet shrink-0'
       >
         <path d='M10.5 2v4' />
         <path d='M14 2H7a2 2 0 0 0-2 2' />
@@ -732,7 +732,7 @@ const products = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-brush-cleaning-icon lucide-brush-cleaning'
+        class='lucide lucide-brush-cleaning-icon lucide-brush-cleaning shrink-0'
       >
         <path d='m16 22-1-4' />
         <path d='M19 13.99a1 1 0 0 0 1-1V12a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v.99a1 1 0 0 0 1 1' />
@@ -767,7 +767,7 @@ const products = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-heart-handshake-icon lucide-heart-handshake'
+        class='lucide lucide-heart-handshake-icon lucide-heart-handshake shrink-0'
       >
         <path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z' />
         <path d='M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66' />
@@ -805,7 +805,7 @@ const products = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-baby-icon lucide-baby'
+        class='lucide lucide-baby-icon lucide-baby shrink-0'
       >
         <path d='M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5' />
         <path d='M15 12h.01' />
@@ -835,7 +835,7 @@ const products = [
         stroke-width='2'
         stroke-linecap='round'
         stroke-linejoin='round'
-        class='lucide lucide-paw-print-icon lucide-paw-print'
+        class='lucide lucide-paw-print-icon lucide-paw-print shrink-0'
       >
         <circle cx='11' cy='4' r='2' />
         <circle cx='18' cy='8' r='2' />
