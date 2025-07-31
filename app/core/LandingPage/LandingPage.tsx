@@ -130,7 +130,7 @@ export function LandingPage(props?: Props) {
           {questions.map((q) => (
             <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6 max-w-4xl mx-auto'>
               <summary class='flex items-center justify-between gap-4 cursor-pointer hover:text-[#24B67B]'>
-                <h3>{q.question}</h3>
+                <p>{q.question}</p>
 
                 <ChevronDown class='group-open:rotate-180 shrink-0' />
               </summary>
