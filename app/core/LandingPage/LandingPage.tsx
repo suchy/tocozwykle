@@ -53,16 +53,16 @@ export function LandingPage(props?: Props) {
         <div class='bg-[#2B2B2B] px-6 py-12'>
           <div class='max-w-7xl mx-auto'>
             <h1 class='text-white font-semibold mb-8 md:max-w-2/3 uppercase leading-relaxed text-2xl sm:text-3xl'>
-              Twoje domowe zakupy<br />dostarczane cyklicznie<br />zgodnie z
-              twoim harmonogramem
+              Twoje zakupy<br />dostarczane cyklicznie<br />zgodnie z twoim
+              harmonogramem
             </h1>
 
             <div class='md:max-w-1/2'>
               <p class='mb-8 text-[#ccc] leading-relaxed text-sm'>
-                Wybierz domowe produkty, których potrzebuejsz, ustaw harmonogram
-                dostaw i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy
-                Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz. Ruszamy
-                już wkrótce!
+                Wybierz produkty, których potrzebuejsz, ustaw harmonogram dostaw
+                i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy Twoje
+                zakupy cyklicznie, dokładnie kiedy potrzebujesz. Ruszamy już
+                wkrótce!
               </p>
 
               <JoinButton />
