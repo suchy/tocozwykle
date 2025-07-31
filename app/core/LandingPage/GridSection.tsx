@@ -8,7 +8,7 @@ export function GridSection({ items }: Props) {
       {items.map((i) => (
         <div>
           <header class='flex items-center gap-4 mb-2'>
-            {i.icon}
+            <i.icon class='shrink-0' />
             <h3 class='font-semibold'>{i.title}</h3>
           </header>
 
