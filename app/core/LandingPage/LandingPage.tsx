@@ -27,7 +27,7 @@ export function LandingPage(props?: Props) {
           <div class='max-w-7xl mx-auto flex items-center justify-between'>
             <a
               href='/'
-              title='To co zwykle - cykliczne dostawy produktów domowych bez wysiłku'
+              title='To co zwykle - cykliczne i wygodne dostawy Twoich zakupów'
               class='text-white font-medium bg-emerald-800 hover:bg-emerald-600 rounded-sm px-4 py-2 flex items-center gap-2'
             >
               <ShoppingCart />
@@ -53,7 +53,7 @@ export function LandingPage(props?: Props) {
         <div class='bg-[#2B2B2B] px-6 py-12'>
           <div class='max-w-7xl mx-auto'>
             <h1 class='text-white font-semibold mb-8 md:max-w-2/3 uppercase leading-relaxed text-2xl sm:text-3xl'>
-              Twoje zakupy<br />dostarczane cyklicznie<br />zgodnie z twoim
+              Twoje zakupy<br />dostarczane cyklicznie<br />zgodnie z Twoim
               harmonogramem
             </h1>
 
