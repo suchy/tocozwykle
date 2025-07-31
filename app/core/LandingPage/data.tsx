@@ -1,6 +1,7 @@
 import {
   Baby,
   Brain,
+  BriefcaseBusiness,
   CalendarSync,
   Cleaning,
   Handshake,
@@ -24,34 +25,34 @@ export const nav = [
 
 export const benefits = [
   {
-    title: 'Męczy Cię podejmowanie drobnych decyzji każdego dnia?',
-    description:
-      'Papier, płyn, pasta, karma, ręczniki... Drobiazgi, które potrafią zjeść pół dnia (i głowę). Z nami wybierasz raz - i zrzucasz z siebie ciężar codziennego decydowania.',
-    icon: Brain,
-  },
-  {
     title: 'Masz dzieci w domu?',
     description:
-      'Codzienność z dziećmi to logistyka na pełen etat. Dzięki cyklicznym dostawom środków higienicznych, proszku do prania czy papieru toaletowego, masz jedną rzecz mniej na głowie - i więcej czasu dla rodziny.',
+      'Wiesz, jak to jest - mokre chusteczki się kończą dokładnie wtedy, gdy są najbardziej potrzebne. Pieluchy <em>jakoś zeszły szybciej</em>, a jedyne, czego dziś nie masz siły robić, to biegać po sklepach. Z <strong>To co zwykle</strong> zdejmujesz z siebie przynajmniej jeden codzienny obowiązek. Ustaw cykliczne dostawy rzeczy, które zużywają się w Twoim domu błyskawicznie - pieluch, kosmetyków dla malucha, proszku do prania dziecięcych ubranek. Zamiast pamiętać o zakupach - pamiętaj o sobie. My zajmiemy się resztą.',
     icon: Baby,
   },
   {
     title: 'Mieszkasz ze zwierzakiem?',
     description:
-      'Karma, żwirek, podkłady, czy smaczki - kończą się zawsze w najmniej odpowiednim momencie. Z nami dostajesz wszystko regularnie, zanim zdążysz się zorientować, że czegoś brakuje.',
+      'Opieka nad zwierzakiem to codzienne drobiazgi, o których nikt poza Tobą nie pamięta - karma się kończy, żwirek trzeba wymienić, przysmaki zniknęły szybciej niż zwykle. Do tego jeszcze worki na spacery, bo przecież nie może ich zabraknąć wtedy, gdy naprawdę będą potrzebne. Z <strong>To co zwykle</strong> możesz przestać się tym martwić. Raz ustawiasz harmonogram dostaw i wiesz, że wszystko dotrze na czas - bez stresu, bez biegania do sklepu w ostatniej chwili. Bo troska to nie tylko głaskanie i spacery. To także ułatwianie sobie życia.',
     icon: PawPrint,
   },
   {
-    title: 'Lubisz spokój i rutynę?',
+    title: 'Męczy Cię podejmowanie drobnych decyzji każdego dnia?',
     description:
-      'Nie każdy lubi niespodzianki - zwłaszcza w zakupach. U nas ustawiasz harmonogram raz, a potrzebne rzeczy pojawiają się pod drzwiami bez hałasu, bez przypomnień, bez zakłóceń.',
+      'Twoja głowa codziennie podejmuje dziesiątki, a nawet setki decyzji - zawodowych, rodzinnych, życiowych. W natłoku obowiązków nawet wybór pasty do zębów czy przypomnienie sobie, że kończy się płyn do prania, potrafi przytłoczyć. Zdejmij z siebie ten ciężar. Z <strong>To co zwykle</strong> decydujesz raz - co, jak często i dokąd ma być dostarczane - a potem masz to z głowy.',
+    icon: Brain,
+  },
+  {
+    title: 'Lubisz, kiedy wszystko jest dokładnie tak, jak zawsze?',
+    description:
+      'Nie każdy lubi zmiany. Dla wielu z nas poczucie bezpieczeństwa to poranna kawa z tej samej filiżanki, ta sama marka płynu do naczyń i regularny rytm dnia, który nie wymaga niespodzianek. W <strong>To co zwykle</strong> rozumiemy ten stan. Dzięki cyklicznym dostawom masz dokładnie to, czego używasz - w takiej samej wersji, o tej samej porze, bez rozmów z kurierem i bez zmieniania czegokolwiek, co działa. Nic Ci się nie kończy. Nic Cię nie zaskakuje. Niczego nie musisz wymyślać od nowa. I właśnie o to chodzi.',
     icon: Waves,
   },
   {
-    title: 'Nie chcesz tracić czasu na powtarzalne zakupy?',
+    title: 'Małe biuro, duży spokój',
     description:
-      'Znasz to: co tydzień te same produkty, te same kliknięcia. My robimy to za Ciebie. Ty zyskujesz czas i energię na to, co naprawdę się liczy.',
-    icon: History,
+      'W pracy warto skupić się na tym, co ważne. A nie na tym, że skończył się papier toaletowy, płyn do mycia naczyń albo kawa w kuchni. W małym zespole takie rzeczy potrafią wytrącić z rytmu bardziej, niż by się wydawało. Z <strong>To co zwykle</strong> podstawowe produkty biurowe i higieniczne trafiają do Ciebie automatycznie - regularnie, bez przypominania, bez pilnowania. Ustaw raz i miej to z głowy. Mniej przerw, mniej frustracji, więcej porządku. Tak po prostu.',
+    icon: BriefcaseBusiness,
   },
 ];
 
@@ -200,9 +201,15 @@ export const products = [
     icon: Baby,
   },
   {
+    title: 'Biuro',
+    description:
+      'Papier do drukarki i ksero, notatniki i zeszyty, długopisy, zakreślacze, korektory, taśmy klejące, nożyczki, segregatory i teczki na dokumenty, klipsy i spinacze biurowe, karteczki samoprzylepne...',
+    icon: BriefcaseBusiness,
+  },
+  {
     title: 'Zwierzęta',
     description:
-      'Karma sucha, karma mokra, żwirek, przysmaki, worki na odchody, gryzaki i zabawki...`',
+      'Karma sucha, karma mokra, żwirek, przysmaki, worki na odchody, gryzaki i zabawki...',
     icon: PawPrint,
   },
 ];

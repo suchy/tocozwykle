@@ -12,9 +12,10 @@ export function GridSection({ items }: Props) {
             <h3 class='font-semibold'>{i.title}</h3>
           </header>
 
-          <p class='text-sm leading-loose text-gray-500 pl-10'>
-            {i.description}
-          </p>
+          <p
+            class='text-sm leading-loose text-gray-500 pl-10'
+            dangerouslySetInnerHTML={{ __html: i.description }}
+          />
         </div>
       ))}
     </div>

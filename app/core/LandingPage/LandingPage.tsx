@@ -99,7 +99,7 @@ export function LandingPage(props?: Props) {
 
         <Section
           title='Dlaczego warto?'
-          description='Dostarczymy Twoje zakupy cyklicznie, dokładnie kiedy potrzebujesz - bez stresu, bez wysiłku, bez niespodzianek.'
+          description='Z <strong>To co zwykle</strong> ograniczysz zmęczenie i stres związany z podejmowaniem codziennie dziesiątek drobnych decyzji. Cykliczne dostawy sprawią, że nie musisz już pamiętać o zakupach ani planować - zyskujesz więcej czasu i spokoju na to, co naprawdę ważne.'
           id='dlaczego-warto'
           class='bg-gray-50'
         >
@@ -112,7 +112,7 @@ export function LandingPage(props?: Props) {
 
         <Section
           title='Produkty'
-          description='Poznaj kategorie produktów, które już wkrótce będą dostępne - dla Ciebie, Twojego domu, dzieci i pupila.'
+          description='Poznaj kategorie produktów, które już wkrótce będą dostępne - dla Ciebie, Twojego domu, biura, dzieci i pupila.'
           id='produkty'
         >
           <GridSection items={products} />

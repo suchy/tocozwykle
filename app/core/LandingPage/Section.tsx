@@ -24,12 +24,11 @@ export function Section(
         {description && (
           <p
             class={cn([
-              'mb-12 text-center text-base leading-loose text-gray-500',
+              'mb-12 text-center text-base leading-loose text-gray-500 md:text-balance',
               className,
             ])}
-          >
-            {description}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         )}
 
         {children}
