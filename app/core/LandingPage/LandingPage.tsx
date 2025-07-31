@@ -17,7 +17,7 @@ export function LandingPage(props?: Props) {
     ...head,
     title: 'To co zwykle - cykliczne dostawy Twoich zakupów',
     description:
-      'Zamawiaj to, co zwykle – wygodnie, cyklicznie i bez stresu. Produkty dla Ciebie, dzeci, zwierząt i Twojego domu',
+      'Zamawiaj to, co zwykle – wygodnie, cyklicznie i bez stresu. Produkty dla Ciebie, dzeci, zwierząt i Twojego domu. Zgodnie z Twoim harmonogramem.',
   };
 
   return (
@@ -52,9 +52,9 @@ export function LandingPage(props?: Props) {
 
         <div class='bg-[#2B2B2B] px-6 py-12'>
           <div class='max-w-7xl mx-auto'>
-            <h1 class='text-white font-semibold mb-8 md:max-w-1/2 uppercase leading-relaxed text-2xl sm:text-3xl'>
+            <h1 class='text-white font-semibold mb-8 md:max-w-2/3 uppercase leading-relaxed text-2xl sm:text-3xl'>
               Twoje domowe zakupy<br />dostarczane cyklicznie<br />zgodnie z
-              twoim rytmem
+              twoim harmonogramem
             </h1>
 
             <div class='md:max-w-1/2'>
