@@ -15,7 +15,8 @@ export function LandingPage(props?: Props) {
 
   const h = {
     ...head,
-    title: 'To co zwykle - cykliczne dostawy Twoich zakupów',
+    title:
+      'To co zwykle - cykliczne dostawy zakupów zgodnie z Twoim harmonogramem',
     description:
       'Zamawiaj to, co zwykle – wygodnie, cyklicznie i bez stresu. Produkty dla Ciebie, dzeci, zwierząt i Twojego domu. Zgodnie z Twoim harmonogramem.',
   };
