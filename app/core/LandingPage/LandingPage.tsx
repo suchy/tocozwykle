@@ -17,7 +17,7 @@ export function LandingPage(props?: Props) {
     ...head,
     title: 'To co zwykle - cykliczne dostawy zakupów z Twoim harmonogramem',
     description:
-      'Zamawiaj to, co zwykle – wygodnie, cyklicznie i bez stresu. Produkty dla Ciebie, dzeci, zwierząt i Twojego domu. Zgodnie z Twoim harmonogramem.',
+      'Zamawiaj to, co zwykle – wygodnie, cyklicznie i bez stresu. Produkty dla Ciebie, dzieci, zwierząt i Twojego domu. Zgodnie z Twoim harmonogramem.',
   };
 
   return (
