@@ -59,7 +59,7 @@ export function LandingPage(props?: Props) {
 
             <div class='md:max-w-1/2'>
               <p class='mb-8 text-[#ccc] leading-relaxed text-sm'>
-                Wybierz produkty, których potrzebuejsz, ustaw harmonogram dostaw
+                Wybierz produkty, których potrzebujesz, ustaw harmonogram dostaw
                 i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy Twoje
                 zakupy cyklicznie, dokładnie kiedy potrzebujesz. Ruszamy już
                 wkrótce!
@@ -130,14 +130,15 @@ export function LandingPage(props?: Props) {
           {questions.map((q) => (
             <details class='group mb-6 last:mb-0 border-b border-b-gray-200 pb-6 max-w-4xl mx-auto'>
               <summary class='flex items-center justify-between gap-4 cursor-pointer hover:text-[#24B67B]'>
-                <p>{q.question}</p>
+                <p dangerouslySetInnerHTML={{ __html: q.question }} />
 
                 <ChevronDown class='group-open:rotate-180 shrink-0' />
               </summary>
 
-              <p class='text-sm leading-loose text-gray-500 mt-4'>
-                {q.answer}
-              </p>
+              <p
+                class='text-sm leading-loose text-gray-500 mt-4'
+                dangerouslySetInnerHTML={{ __html: q.answer }}
+              />
             </details>
           ))}
         </Section>

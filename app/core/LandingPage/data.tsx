@@ -39,7 +39,7 @@ export const benefits = [
   {
     title: 'Męczy Cię podejmowanie drobnych decyzji każdego dnia?',
     description:
-      'Twoja głowa codziennie podejmuje dziesiątki, a nawet setki decyzji - zawodowych, rodzinnych, życiowych. W natłoku obowiązków nawet wybór pasty do zębów czy przypomnienie sobie, że kończy się płyn do prania, potrafi przytłoczyć. Zdejmij z siebie ten ciężar. Z <strong>To co zwykle</strong> decydujesz raz - co, jak często i dokąd ma być dostarczane - a potem masz to z głowy.',
+      'Twoja głowa codziennie podejmuje dziesiątki, a nawet setki decyzji - zawodowych, rodzinnych, życiowych. W natłoku obowiązków nawet wybór pasty do zębów czy przypomnienie sobie, że kończy się płyn do prania, potrafi przytłoczyć. Zdejmij z siebie ten ciężar. Z <strong>To co zwykle</strong> decydujesz raz, co, jak często i dokąd ma być dostarczane, a potem masz to z głowy.',
     icon: Brain,
   },
   {
@@ -82,22 +82,22 @@ export const howItWorks = [
   },
   {
     title: 'Dwa dni przed planowaną dostawą wyślemy Ci przypomnienie',
-    description: 'Możesz zmienić, zawiesić lub anulowć swoje zamówienie.',
+    description: 'Możesz zmienić, zawiesić lub anulować swoje zamówienie.',
     icon: Mail,
   },
   {
     title: 'Wysyłamy Twoje zamówienie',
     description:
-      'Zgodnie z wybranym przez Ciebie harmonogramem i sposobem dostawy. Nie musisz podejmować już żadnych decyzji.',
+      'Zgodnie z wybranym przez Ciebie harmonogramem i sposobem dostawy. Nie musisz już podejmować żadnych decyzji.',
     icon: Truck,
   },
 ];
 
 export const questions = [
   {
-    question: 'Czym jest usługa "To co zwykle"?',
+    question: 'Czym jest usługa <strong>To co zwykle</strong>?',
     answer:
-      '"To co zwykle" to usługa cyklicznego dostarczania wybranych przez Ciebie produktów, zgodnie z ustalonym przez Ciebie harmonogramem.',
+      '<strong>To co zwykle</strong> to usługa cyklicznego dostarczania wybranych przez Ciebie produktów, zgodnie z ustalonym przez Ciebie harmonogramem.',
   },
   {
     question:
@@ -111,7 +111,7 @@ export const questions = [
       'Nie, sam deklarujesz jak często i do kiedy chcesz otrzymywać dostawy. Możesz zrezygnować w dowolnym momencie ale na maksymalnie dwa dni przed planowaną wysyłką.',
   },
   {
-    question: 'Jak szybko realizowana jest pierwsza dostawa?',
+    question: 'Jak szybko realizowana będzie pierwsza dostawa',
     answer:
       'Pierwsza wysyłka może się odbyć minimalnie po dwóch dniach roboczych od złożenia zamówienia.',
   },
@@ -185,7 +185,7 @@ export const products = [
   {
     title: 'Produkty do domu',
     description:
-      'Płyny do podłóg, środki do mycia szyb i luster, środki do mycia kuchni, środki do mycia łazienki, środki do mebli, udraźniaczne do rur, akcesoria do sprzątania, proszki i płyny do prania, płyny do płukania, odplamiacze i wybielacze, płyny i kapsułki do zmywarki, płyny do mycia maczyń, worki na śmieci, ręczniki papierowe, odświeżacze powietrza, folia spożywcza, woreczki śniadaniowe...',
+      'Płyny do podłóg, środki do mycia szyb i luster, środki do mycia kuchni, środki do mycia łazienki, środki do mebli, udrażniaczne do rur, akcesoria do sprzątania, proszki i płyny do prania, płyny do płukania, odplamiacze i wybielacze, płyny i kapsułki do zmywarki, płyny do mycia naczyń, worki na śmieci, ręczniki papierowe, odświeżacze powietrza, folia spożywcza, woreczki śniadaniowe...',
     icon: Cleaning,
   },
   {
@@ -197,7 +197,7 @@ export const products = [
   {
     title: 'Artykuły dla dzieci',
     description:
-      'Kremy, balsamy i oliwki, kremy przeciwłoneczne, pudry i kremy ochronne podpieluszkowe, żele i plyny do mycia, szampony i odżywki, pasty do zębów, szczoteczki do zębów, płyny do płukania ust, pieluchy dla dzieci, pieluchomajtki dla dzieci, chusteczki i papiery nawilżane dla dzieci, podkłady do przewijania, płatki higieniczne, patyczki higieniczne...',
+      'Kremy, balsamy i oliwki, kremy przeciwłoneczne, pudry i kremy ochronne podpieluszkowe, żele i plyny do mycia, szampony i odżywki, pasty i szczoteczki do zębów, płyny do płukania ust, pieluchy dla dzieci, pieluchomajtki dla dzieci, chusteczki i papiery nawilżane dla dzieci, podkłady do przewijania, płatki higieniczne, patyczki higieniczne...',
     icon: Baby,
   },
   {
