@@ -33,6 +33,7 @@ export function Page(
           href={assetPath('/static/images/favicon.png')}
           type='image/png'
         />
+        <link rel='canonical' href='https://tocozwykle.pl' />
 
         {!!head && head()}
 
