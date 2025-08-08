@@ -51,13 +51,13 @@ export function LandingPage(props?: Props) {
         </div>
 
         <div class='bg-[#2B2B2B] px-6 py-12'>
-          <div class='max-w-7xl mx-auto'>
-            <h1 class='text-white font-semibold mb-8 md:max-w-2/3 uppercase leading-relaxed text-2xl sm:text-3xl'>
-              Cykliczne dostawy Twoich zakupów<br />zgodnie z Twoim
-              harmonogramem
-            </h1>
+          <div class='max-w-7xl mx-auto md:flex justify-between gap-8'>
+            <div class='md:max-w-1/2 mb-8 md:mb-0'>
+              <h1 class='text-white font-semibold mb-8 uppercase leading-relaxed text-2xl sm:text-3xl'>
+                Cykliczne dostawy Twoich zakupów<br />zgodnie z Twoim
+                harmonogramem
+              </h1>
 
-            <div class='md:max-w-1/2'>
               <p class='mb-8 text-[#ccc] leading-relaxed text-sm'>
                 Wybierz produkty, których potrzebujesz, ustaw harmonogram dostaw
                 i zapomnij o ciągłym podejmowaniu decyzji. Dostarczymy Twoje
@@ -66,6 +66,19 @@ export function LandingPage(props?: Props) {
               </p>
 
               <JoinButton />
+            </div>
+
+            <div class='grow'>
+              <iframe
+                src='https://www.youtube.com/embed/361EP0NMcIA?si=K9mpo7uBD8yD0_v8&amp;controls=0'
+                title='YouTube video player'
+                frameborder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                referrerpolicy='strict-origin-when-cross-origin'
+                allowfullscreen
+                class='rounded-sm w-full aspect-video'
+              >
+              </iframe>
             </div>
           </div>
         </div>
